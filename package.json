@@ -1,0 +1,13 @@
+{
+  "name": "d04-openapi-helper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Utilities for inspecting, validating, and transforming OpenAPI 3 documents.",
+  "exports": "./src/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
