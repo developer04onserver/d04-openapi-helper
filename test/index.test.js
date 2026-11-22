@@ -1,0 +1,2 @@
+import test from "node:test"; import assert from "node:assert/strict"; import { listOperations, toRoutePath, summarizeSpec, validateDocument } from "../src/index.js";
+test("extracts operations and transforms path params",()=>{const spec={openapi:"3.1.0",info:{title:"Demo",version:"1"},paths:{"/users/{id}":{get:{summary:"Get user",responses:{200:{description:"ok"}}}}}};assert.equal(listOperations(spec)[0].method,"GET");assert.equal(toRoutePath("/users/{id}"),"/users/:id");assert.equal(summarizeSpec(spec).operationCount,1);assert.equal(validateDocument(spec).valid,true);});
